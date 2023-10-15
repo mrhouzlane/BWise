@@ -1,2 +1,23 @@
-# ilguard
-ILGuard: A Chrome extension leveraging Uniswap v4 hooks for optimized impermanent loss mitigation in DeFi ecosystems.
+# ILGuard 
+ILGuard: A Chrome extension to Minimize impermanent loss with dynamic rebalancing & oracle-driven strategies.
+
+# Description 
+
+
+# Tehcnical Architecture 
+
+
+# Technology used 
+
+
+# Smart contracts 
+
+
+# Demo 
+
+
+# Contact 
+
+
+
+
