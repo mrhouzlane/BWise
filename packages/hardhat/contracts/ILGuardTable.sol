@@ -30,5 +30,42 @@ contract ILGuardTable is ERC721Holder{
         );
     }
 
+        function insert(
+        string memory pool, 
+        string memory platform, 
+        uint256 value, 
+        bool autoRebalance
+    ) public payable {
+        /* Under the hood, SQL helpers formulates:
+        *
+        *  INSERT INTO {prefix}_{chainId}_{tableId} (POOL,PLATFORM,Value,Auto_rebalance) VALUES(
+        *    'pool',
+        *    'platform',
+        *    value,
+        *    autoRebalance
+        *  );
+        */
+
+        // Convert to Strings for SQL insertion 
+        string memory data = string(abi.encodePacked(
+            SQLHelpers.quote(pool), ",",
+            SQLHelpers.quote(platform), ",",
+            Strings.toString(value), ",", 
+            SQLHelpers.quote(autoRebalance ? "true" : "false")  // Convert bool to string
+        ));
+
+        TablelandDeployments.get().mutate(
+            address(this),
+            _tableId,
+            SQLHelpers.toInsert(
+                _TABLE_PREFIX,
+                _tableId,
+                "POOL,PLATFORM,Value,Auto_rebalance",
+                data
+            )
+        );
+    }
+
+
 
 }

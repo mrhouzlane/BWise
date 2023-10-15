@@ -27,14 +27,24 @@ import type {
 export interface ILGuardTableInterface extends utils.Interface {
   functions: {
     "create()": FunctionFragment;
+    "insert(string,string,uint256,bool)": FunctionFragment;
     "onERC721Received(address,address,uint256,bytes)": FunctionFragment;
   };
 
   getFunction(
-    nameOrSignatureOrTopic: "create" | "onERC721Received"
+    nameOrSignatureOrTopic: "create" | "insert" | "onERC721Received"
   ): FunctionFragment;
 
   encodeFunctionData(functionFragment: "create", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "insert",
+    values: [
+      PromiseOrValue<string>,
+      PromiseOrValue<string>,
+      PromiseOrValue<BigNumberish>,
+      PromiseOrValue<boolean>
+    ]
+  ): string;
   encodeFunctionData(
     functionFragment: "onERC721Received",
     values: [
@@ -46,6 +56,7 @@ export interface ILGuardTableInterface extends utils.Interface {
   ): string;
 
   decodeFunctionResult(functionFragment: "create", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "insert", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "onERC721Received",
     data: BytesLike
@@ -85,6 +96,14 @@ export interface ILGuardTable extends BaseContract {
       overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
 
+    insert(
+      pool: PromiseOrValue<string>,
+      platform: PromiseOrValue<string>,
+      value: PromiseOrValue<BigNumberish>,
+      autoRebalance: PromiseOrValue<boolean>,
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+    ): Promise<ContractTransaction>;
+
     onERC721Received(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -98,6 +117,14 @@ export interface ILGuardTable extends BaseContract {
     overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
+  insert(
+    pool: PromiseOrValue<string>,
+    platform: PromiseOrValue<string>,
+    value: PromiseOrValue<BigNumberish>,
+    autoRebalance: PromiseOrValue<boolean>,
+    overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+  ): Promise<ContractTransaction>;
+
   onERC721Received(
     arg0: PromiseOrValue<string>,
     arg1: PromiseOrValue<string>,
@@ -108,6 +135,14 @@ export interface ILGuardTable extends BaseContract {
 
   callStatic: {
     create(overrides?: CallOverrides): Promise<void>;
+
+    insert(
+      pool: PromiseOrValue<string>,
+      platform: PromiseOrValue<string>,
+      value: PromiseOrValue<BigNumberish>,
+      autoRebalance: PromiseOrValue<boolean>,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     onERC721Received(
       arg0: PromiseOrValue<string>,
@@ -125,6 +160,14 @@ export interface ILGuardTable extends BaseContract {
       overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
 
+    insert(
+      pool: PromiseOrValue<string>,
+      platform: PromiseOrValue<string>,
+      value: PromiseOrValue<BigNumberish>,
+      autoRebalance: PromiseOrValue<boolean>,
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+    ): Promise<BigNumber>;
+
     onERC721Received(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -136,6 +179,14 @@ export interface ILGuardTable extends BaseContract {
 
   populateTransaction: {
     create(
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+    ): Promise<PopulatedTransaction>;
+
+    insert(
+      pool: PromiseOrValue<string>,
+      platform: PromiseOrValue<string>,
+      value: PromiseOrValue<BigNumberish>,
+      autoRebalance: PromiseOrValue<boolean>,
       overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
 
