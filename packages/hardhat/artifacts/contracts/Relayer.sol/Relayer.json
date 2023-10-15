@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Relayer",
+  "sourceName": "contracts/Relayer.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220864f777cd83cce50b4438c435fc76acbc7953492d042d7a9aef7abb267ac1b6764736f6c63430008130033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220864f777cd83cce50b4438c435fc76acbc7953492d042d7a9aef7abb267ac1b6764736f6c63430008130033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
