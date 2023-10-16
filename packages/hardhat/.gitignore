@@ -8,3 +8,5 @@ coverage.json
 typechain
 typechain-types
 
+## IDE ##
+.DS_Store
