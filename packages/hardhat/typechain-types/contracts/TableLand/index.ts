@@ -7,5 +7,4 @@ import type * as policies from "./policies";
 export type { policies };
 import type * as utils from "./utils";
 export type { utils };
-export type { ILGuardTable } from "./ILGuardTable";
 export type { TablelandTables } from "./TablelandTables";

@@ -2,4 +2,5 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as tableLand from "./TableLand";
+export { CurrencyPrice__factory } from "./CurrencyPrice__factory";
 export { ILGuardTable__factory } from "./ILGuardTable__factory";

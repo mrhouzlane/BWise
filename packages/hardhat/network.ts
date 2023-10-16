@@ -1,7 +1,7 @@
 export interface TablelandNetworkConfig {
     // tableland testnet testnets
     sepolia: string;
-    maticmum: string;
+    mumbai: string;
     "filecoin-calibration": string;
   }
   
@@ -9,7 +9,7 @@ export interface TablelandNetworkConfig {
   
   export const proxies: TablelandNetworkConfig = {
     sepolia: "0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D",
-    maticmum: "0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68",
+    mumbai: "0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68",
     "filecoin-calibration": "0x030BCf3D50cad04c2e57391B12740982A9308621",
   };
   
@@ -17,7 +17,7 @@ export interface TablelandNetworkConfig {
   export const baseURIs: TablelandNetworkConfig = {
     // testnets
     sepolia: "https://testnets.tableland.network/api/v1/tables/11155111/",
-    maticmum: "https://testnets.tableland.network/api/v1/tables/80001/",
+    mumbai: "https://testnets.tableland.network/api/v1/tables/80001/",
     "filecoin-calibration":
       "https://testnets.tableland.network/api/v1/tables/314159/",
   };

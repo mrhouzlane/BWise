@@ -4,5 +4,4 @@
 export * as interfaces from "./interfaces";
 export * as policies from "./policies";
 export * as utils from "./utils";
-export { ILGuardTable__factory } from "./ILGuardTable__factory";
 export { TablelandTables__factory } from "./TablelandTables__factory";

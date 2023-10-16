@@ -13,6 +13,10 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
+      name: "AggregatorV3Interface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AggregatorV3Interface__factory>;
+    getContractFactory(
       name: "OwnableUpgradeable",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.OwnableUpgradeable__factory>;
@@ -97,9 +101,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TablelandDeployments__factory>;
     getContractFactory(
-      name: "ILGuardTable",
+      name: "CurrencyPrice",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ILGuardTable__factory>;
+    ): Promise<Contracts.CurrencyPrice__factory>;
     getContractFactory(
       name: "ILGuardTable",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -169,6 +173,11 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC721A__factory>;
 
+    getContractAt(
+      name: "AggregatorV3Interface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AggregatorV3Interface>;
     getContractAt(
       name: "OwnableUpgradeable",
       address: string,
@@ -275,10 +284,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.TablelandDeployments>;
     getContractAt(
-      name: "ILGuardTable",
+      name: "CurrencyPrice",
       address: string,
       signer?: ethers.Signer
-    ): Promise<Contracts.ILGuardTable>;
+    ): Promise<Contracts.CurrencyPrice>;
     getContractAt(
       name: "ILGuardTable",
       address: string,

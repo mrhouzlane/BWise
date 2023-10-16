@@ -3,4 +3,5 @@
 /* eslint-disable */
 import type * as tableLand from "./TableLand";
 export type { tableLand };
+export type { CurrencyPrice } from "./CurrencyPrice";
 export type { ILGuardTable } from "./ILGuardTable";
