@@ -57,7 +57,6 @@ contract MonitorDAI {
         );
 
         return true;
-
     }
 
 }
