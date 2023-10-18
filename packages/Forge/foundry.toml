@@ -19,5 +19,6 @@ scrollSepolia = "https://rpc.ankr.com/scroll_sepolia_testnet"
 gnosisChiado = "https://rpc.chiadochain.net"
 
 [etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
 polygonMumbai = { key = "${ETHERSCAN_API_KEY}" }
 scrollSepolia = { key = "${ETHERSCAN_API_KEY}" , url = "https://api-sepolia.scrollscan.dev/api" }

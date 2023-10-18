@@ -46,7 +46,7 @@ forge verify-contract \
     --verifier etherscan \
     --verifier-url https://api-sepolia.scrollscan.dev/api \
     --etherscan-api-key D62920783A4311EE9D6600155D570C742E \
-    --compiler-version v0.8.17 \
+    --compiler-version v0.8.20 \
     0xD46073c9118890eeaAF804Ff0EA9615fe4701b7d \
     SavingsDai
 
