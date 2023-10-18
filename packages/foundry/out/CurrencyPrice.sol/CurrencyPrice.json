@@ -1,0 +1,634 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        }
+      ],
+      "name": "getETHPrice",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080806040523461003c57600080546001600160a01b03191673694aa1769357215de4fac081bf1f309adc32530617905561019b90816100428239f35b600080fdfe60808060405260048036101561001457600080fd5b600090813560e01c63215b457f1461002b57600080fd5b34610148576020366003190112610148578154633fabe5a360e21b84528135939060a0908290849082906001600160a01b03165afa90811561013d5783916100c5575b5080840293838212600160ff1b8214166100b257818505149015171561009f576020836305f5e10060405191058152f35b634e487b7160e01b825260119052602490fd5b634e487b7160e01b845260118352602484fd5b905060a03d8111610136575b601f8101601f191682016001600160401b038111838210176101235760a09183916040528101031261011f576101068161014c565b5061011860806020830151920161014c565b503861006e565b8280fd5b634e487b7160e01b855260418452602485fd5b503d6100d1565b6040513d85823e3d90fd5b5080fd5b51906001600160501b038216820361016057565b600080fdfea2646970667358221220d2ca1e2087ac51a216236852fecaca00dd90b3aec6a2b94df90cec2929e39e2864736f6c63430008150033",
+    "sourceMap": "142:434:16:-:0;;;;;;;242:122;142:434;;-1:-1:-1;;;;;;142:434:16;289:42;142:434;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x60808060405260048036101561001457600080fd5b600090813560e01c63215b457f1461002b57600080fd5b34610148576020366003190112610148578154633fabe5a360e21b84528135939060a0908290849082906001600160a01b03165afa90811561013d5783916100c5575b5080840293838212600160ff1b8214166100b257818505149015171561009f576020836305f5e10060405191058152f35b634e487b7160e01b825260119052602490fd5b634e487b7160e01b845260118352602484fd5b905060a03d8111610136575b601f8101601f191682016001600160401b038111838210176101235760a09183916040528101031261011f576101068161014c565b5061011860806020830151920161014c565b503861006e565b8280fd5b634e487b7160e01b855260418452602485fd5b503d6100d1565b6040513d85823e3d90fd5b5080fd5b51906001600160501b038216820361016057565b600080fdfea2646970667358221220d2ca1e2087ac51a216236852fecaca00dd90b3aec6a2b94df90cec2929e39e2864736f6c63430008150033",
+    "sourceMap": "142:434:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;142:434:16;;;;;;-1:-1:-1;;;500:27:16;;142:434;;;;500:27;;142:434;;;;;;-1:-1:-1;;;;;142:434:16;500:27;;;;;;;142:434;500:27;;;142:434;-1:-1:-1;142:434:16;;;;;;;-1:-1:-1;;;142:434:16;;;;;;;;;;;;;;;;;558:9;142:434;;;;;;;;-1:-1:-1;;;142:434:16;;;;;;;;;-1:-1:-1;;;142:434:16;;;;;;;;500:27;;;;;;;;;;142:434;;;-1:-1:-1;;142:434:16;;;-1:-1:-1;;;;;142:434:16;;;;;;;;500:27;142:434;;;;;500:27;;142:434;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;500:27;;;142:434;;;;;-1:-1:-1;;;142:434:16;;;;;;;;500:27;;;;;;142:434;;;;;;;;;;;;;;;;-1:-1:-1;;;;;142:434:16;;;;;;:::o;:::-;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getETHPrice(int256)": "215b457f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\"}],\"name\":\"getETHPrice\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/CurrencyPrice.sol\":\"CurrencyPrice\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":10},\"remappings\":[\":@chainlink/contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/\",\"lib/foundry-chainlink-toolkit:@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\"lib/foundry-chainlink-toolkit:@chainlink/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/\",\"lib/foundry-chainlink-toolkit:@openzeppelin/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/\"],\"viaIR\":true},\"sources\":{\"lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\":{\"keccak256\":\"0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7\",\"dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c\"]},\"src/CurrencyPrice.sol\":{\"keccak256\":\"0x96d6893d3a6a00f9b527d9d56007fd1b14e2d5f89c0cbc9cc4cd4ab6e8b498fa\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://5d1728bc789349251807944500ad04ef3fbc54bdd25dce61bc1728d9f94b00ff\",\"dweb:/ipfs/QmUy4bove3yZGqJJ1ZSq8tnL2makr6h5GKUJCWAhXRpCPv\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int256",
+              "name": "val",
+              "type": "int256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getETHPrice",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink/contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/",
+        "lib/foundry-chainlink-toolkit:@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "lib/foundry-chainlink-toolkit:@chainlink/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/",
+        "lib/foundry-chainlink-toolkit:@openzeppelin/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/CurrencyPrice.sol": "CurrencyPrice"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+        "keccak256": "0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846",
+        "urls": [
+          "bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7",
+          "dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c"
+        ],
+        "license": "MIT"
+      },
+      "src/CurrencyPrice.sol": {
+        "keccak256": "0x96d6893d3a6a00f9b527d9d56007fd1b14e2d5f89c0cbc9cc4cd4ab6e8b498fa",
+        "urls": [
+          "bzz-raw://5d1728bc789349251807944500ad04ef3fbc54bdd25dce61bc1728d9f94b00ff",
+          "dweb:/ipfs/QmUy4bove3yZGqJJ1ZSq8tnL2makr6h5GKUJCWAhXRpCPv"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/CurrencyPrice.sol",
+    "id": 39443,
+    "exportedSymbols": {
+      "AggregatorV3Interface": [
+        39347
+      ],
+      "CurrencyPrice": [
+        39442
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:537:16",
+    "nodes": [
+      {
+        "id": 39406,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ]
+      },
+      {
+        "id": 39407,
+        "nodeType": "ImportDirective",
+        "src": "64:76:16",
+        "nodes": [],
+        "absolutePath": "lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
+        "file": "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 39443,
+        "sourceUnit": 39348,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 39442,
+        "nodeType": "ContractDefinition",
+        "src": "142:434:16",
+        "nodes": [
+          {
+            "id": 39410,
+            "nodeType": "VariableDeclaration",
+            "src": "171:40:16",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "priceFeed",
+            "nameLocation": "202:9:16",
+            "scope": 39442,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+              "typeString": "contract AggregatorV3Interface"
+            },
+            "typeName": {
+              "id": 39409,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 39408,
+                "name": "AggregatorV3Interface",
+                "nameLocations": [
+                  "171:21:16"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 39347,
+                "src": "171:21:16"
+              },
+              "referencedDeclaration": 39347,
+              "src": "171:21:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+                "typeString": "contract AggregatorV3Interface"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 39420,
+            "nodeType": "FunctionDefinition",
+            "src": "218:153:16",
+            "nodes": [],
+            "body": {
+              "id": 39419,
+              "nodeType": "Block",
+              "src": "232:139:16",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 39417,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 39413,
+                      "name": "priceFeed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39410,
+                      "src": "242:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+                        "typeString": "contract AggregatorV3Interface"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "hexValue": "307836393441413137363933353732313544453446414330383162663166333039614443333235333036",
+                          "id": 39415,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "289:42:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "value": "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 39414,
+                        "name": "AggregatorV3Interface",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39347,
+                        "src": "254:21:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_AggregatorV3Interface_$39347_$",
+                          "typeString": "type(contract AggregatorV3Interface)"
+                        }
+                      },
+                      "id": 39416,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "254:110:16",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+                        "typeString": "contract AggregatorV3Interface"
+                      }
+                    },
+                    "src": "242:122:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+                      "typeString": "contract AggregatorV3Interface"
+                    }
+                  },
+                  "id": 39418,
+                  "nodeType": "ExpressionStatement",
+                  "src": "242:122:16"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 39411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "229:2:16"
+            },
+            "returnParameters": {
+              "id": 39412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "232:0:16"
+            },
+            "scope": 39442,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 39441,
+            "nodeType": "FunctionDefinition",
+            "src": "403:171:16",
+            "nodes": [],
+            "body": {
+              "id": 39440,
+              "nodeType": "Block",
+              "src": "465:109:16",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    null,
+                    39428,
+                    null,
+                    null,
+                    null
+                  ],
+                  "declarations": [
+                    null,
+                    {
+                      "constant": false,
+                      "id": 39428,
+                      "mutability": "mutable",
+                      "name": "price",
+                      "nameLocation": "485:5:16",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 39440,
+                      "src": "478:12:16",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      },
+                      "typeName": {
+                        "id": 39427,
+                        "name": "int256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "478:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    null,
+                    null,
+                    null
+                  ],
+                  "id": 39432,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 39429,
+                        "name": "priceFeed",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39410,
+                        "src": "500:9:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_AggregatorV3Interface_$39347",
+                          "typeString": "contract AggregatorV3Interface"
+                        }
+                      },
+                      "id": 39430,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "510:15:16",
+                      "memberName": "latestRoundData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 39346,
+                      "src": "500:25:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint80_$_t_int256_$_t_uint256_$_t_uint256_$_t_uint80_$",
+                        "typeString": "function () view external returns (uint80,int256,uint256,uint256,uint80)"
+                      }
+                    },
+                    "id": 39431,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "500:27:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint80_$_t_int256_$_t_uint256_$_t_uint256_$_t_uint80_$",
+                      "typeString": "tuple(uint80,int256,uint256,uint256,uint80)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "475:52:16"
+                },
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 39438,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "components": [
+                        {
+                          "commonType": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "id": 39435,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 39433,
+                            "name": "price",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39428,
+                            "src": "545:5:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "*",
+                          "rightExpression": {
+                            "id": 39434,
+                            "name": "val",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39422,
+                            "src": "553:3:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "src": "545:11:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        }
+                      ],
+                      "id": 39436,
+                      "isConstant": false,
+                      "isInlineArray": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "TupleExpression",
+                      "src": "544:13:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "/",
+                    "rightExpression": {
+                      "hexValue": "313030303030303030",
+                      "id": 39437,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "558:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100000000_by_1",
+                        "typeString": "int_const 100000000"
+                      },
+                      "value": "100000000"
+                    },
+                    "src": "544:23:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "functionReturnParameters": 39426,
+                  "id": 39439,
+                  "nodeType": "Return",
+                  "src": "537:30:16"
+                }
+              ]
+            },
+            "functionSelector": "215b457f",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getETHPrice",
+            "nameLocation": "412:11:16",
+            "parameters": {
+              "id": 39423,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39422,
+                  "mutability": "mutable",
+                  "name": "val",
+                  "nameLocation": "431:3:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39441,
+                  "src": "424:10:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 39421,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:12:16"
+            },
+            "returnParameters": {
+              "id": 39426,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39425,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39441,
+                  "src": "457:6:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 39424,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "457:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "456:8:16"
+            },
+            "scope": 39442,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CurrencyPrice",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          39442
+        ],
+        "name": "CurrencyPrice",
+        "nameLocation": "151:13:16",
+        "scope": 39443,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 16
+}

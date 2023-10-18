@@ -1,0 +1,15 @@
+chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/
+chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+@chainlink/contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts
+openzeppelin-contracts/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/
+lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/
+lib/foundry-chainlink-toolkit:@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/
+lib/foundry-chainlink-toolkit:@chainlink/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/
+lib/foundry-chainlink-toolkit:@openzeppelin/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/
+lib/foundry-chainlink-toolkit:chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/
+lib/foundry-chainlink-toolkit:chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/
+lib/foundry-chainlink-toolkit:ds-test/=lib/foundry-chainlink-toolkit/lib/forge-std/lib/ds-test/src/
+lib/foundry-chainlink-toolkit:forge-std/=lib/foundry-chainlink-toolkit/lib/forge-std/src/
+lib/foundry-chainlink-toolkit:openzeppelin-contracts/=lib/foundry-chainlink-toolkit/lib/openzeppelin-contracts/
