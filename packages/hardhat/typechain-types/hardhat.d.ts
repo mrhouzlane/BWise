@@ -105,9 +105,57 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.CurrencyPrice__factory>;
     getContractFactory(
+      name: "DaiJoin",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.DaiJoin__factory>;
+    getContractFactory(
+      name: "DSTokenLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.DSTokenLike__factory>;
+    getContractFactory(
+      name: "GemLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.GemLike__factory>;
+    getContractFactory(
+      name: "VatLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.VatLike__factory>;
+    getContractFactory(
       name: "ILGuardTable",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ILGuardTable__factory>;
+    getContractFactory(
+      name: "ISavingsDai",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISavingsDai__factory>;
+    getContractFactory(
+      name: "MonitorDAI",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MonitorDAI__factory>;
+    getContractFactory(
+      name: "DaiJoinLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.DaiJoinLike__factory>;
+    getContractFactory(
+      name: "DaiLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.DaiLike__factory>;
+    getContractFactory(
+      name: "IERC1271",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC1271__factory>;
+    getContractFactory(
+      name: "PotLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PotLike__factory>;
+    getContractFactory(
+      name: "SavingsDai",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SavingsDai__factory>;
+    getContractFactory(
+      name: "VatLike",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.VatLike__factory>;
     getContractFactory(
       name: "ITablelandController",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -132,6 +180,10 @@ declare module "hardhat/types/runtime" {
       name: "TablelandDeployments",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TablelandDeployments__factory>;
+    getContractFactory(
+      name: "Vat",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Vat__factory>;
     getContractFactory(
       name: "ERC721A__IERC721ReceiverUpgradeable",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -289,10 +341,70 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.CurrencyPrice>;
     getContractAt(
+      name: "DaiJoin",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.DaiJoin>;
+    getContractAt(
+      name: "DSTokenLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.DSTokenLike>;
+    getContractAt(
+      name: "GemLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.GemLike>;
+    getContractAt(
+      name: "VatLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.VatLike>;
+    getContractAt(
       name: "ILGuardTable",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ILGuardTable>;
+    getContractAt(
+      name: "ISavingsDai",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISavingsDai>;
+    getContractAt(
+      name: "MonitorDAI",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MonitorDAI>;
+    getContractAt(
+      name: "DaiJoinLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.DaiJoinLike>;
+    getContractAt(
+      name: "DaiLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.DaiLike>;
+    getContractAt(
+      name: "IERC1271",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC1271>;
+    getContractAt(
+      name: "PotLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PotLike>;
+    getContractAt(
+      name: "SavingsDai",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SavingsDai>;
+    getContractAt(
+      name: "VatLike",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.VatLike>;
     getContractAt(
       name: "ITablelandController",
       address: string,
@@ -323,6 +435,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.TablelandDeployments>;
+    getContractAt(
+      name: "Vat",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Vat>;
     getContractAt(
       name: "ERC721A__IERC721ReceiverUpgradeable",
       address: string,

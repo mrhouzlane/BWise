@@ -17,7 +17,26 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.19",
+    compilers:[  
+    {
+      version: "0.7.6",
+    },
+    {
+      version: "0.8.20",
+    },
+    {
+      version: "0.8.17",
+    },
+    {
+      version: "0.8.4",
+    },
+    {
+      version: "0.8.0",
+    },
+    {
+      version: "0.6.12",
+    },
+    ],
     settings: {
       optimizer: {
         enabled: true,
@@ -51,7 +70,18 @@ const config: HardhatUserConfig = {
       // polygon
       polygon: process.env.POLYSCAN_API_KEY || "",
       polygonMumbai: process.env.POLYSCAN_API_KEY || "",
-    }
+      scrollSepolia: 'D62920783A4311EE9D6600155D570C742E',
+    },
+    customChains: [
+      {
+        network: 'scrollSepolia',
+        chainId: 534351,
+        urls: {
+          apiURL: 'https://api-sepolia.scrollscan.dev/api',
+          browserURL: 'https://sepolia.scrollscan.dev/',
+        },
+      },
+    ],
   },
   networks: {
    
@@ -83,7 +113,12 @@ const config: HardhatUserConfig = {
         process.env.FILECOIN_CALIBRATION_PRIVATE_KEY !== undefined
           ? [process.env.FILECOIN_CALIBRATION_PRIVATE_KEY]
           : [],
-    }
+    },
+    scrollSepolia: {
+      url: process.env.SCROLL_TESTNET_URL || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
   },
   baseURIs,
   proxies,
