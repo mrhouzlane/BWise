@@ -1,0 +1,7 @@
+{
+  "transactions": [
+    {
+      "rpc": "https://rpc.ankr.com/scroll_sepolia_testnet"
+    }
+  ]
+}

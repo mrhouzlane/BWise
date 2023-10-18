@@ -1,0 +1,21 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "script/Counter.s.sol",
+    "id": 39303,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "275:0:14",
+    "nodes": [],
+    "license": "UNLICENSED"
+  },
+  "id": 14
+}
