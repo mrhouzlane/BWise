@@ -1,0 +1,16 @@
+.tokenList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100vh; 
+    color: white; 
+    font-weight: bold;
+    position: relative;
+  }
+  .tokenItem:not(:last-child) {
+    margin-right: 120px;
+  }
+  .tokenItem {
+    margin: 0 10px; 
+  }

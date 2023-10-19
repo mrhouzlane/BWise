@@ -1,0 +1,44 @@
+@import '../../assets/variables.scss';
+
+/* Menu styles */
+.menu {
+  width: 20%;
+  padding-left: 20px;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  border-right: 1px solid rgba(201, 196, 196, 0.3);
+}
+
+.menuItem {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 8px 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuItemActive {
+  color: $primary-color;
+}
+
+.menuItem:hover {
+  color: #27ada2;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s;
+}
+
+.menuIconActive {
+  filter: brightness(1.2);
+}

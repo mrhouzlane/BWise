@@ -1,0 +1,9 @@
+@import '../assets/variables.scss';
+
+.App {
+  background-color: $bg-dark;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

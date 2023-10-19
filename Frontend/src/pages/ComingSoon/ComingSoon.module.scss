@@ -1,0 +1,23 @@
+/* Container styles for both wallet and about sections */
+.container {
+    width: calc(75% - 80px);
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    top: 200px;
+    left: 0;
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+
+.title {
+    text-align: center;
+}

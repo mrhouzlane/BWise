@@ -1,0 +1,1 @@
+export const selectWallet = (state) => state.wallet;
