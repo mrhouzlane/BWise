@@ -1,23 +1,3 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-/// SavingsDai.sol -- A tokenized representation DAI in the DSR (pot)
-
-// Copyright (C) 2017, 2018, 2019 dbrock, rain, mrchico
-// Copyright (C) 2021-2022 Dai Foundation
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Affero General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Affero General Public License for more details.
-//
-// You should have received a copy of the GNU Affero General Public License
-// along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 pragma solidity ^0.8.17;
 
 interface IERC1271 {
@@ -228,7 +208,7 @@ contract SavingsDai {
         daiJoin.join(address(this), assets);
         pot.join(shares);
 
-        // note: we don't need an overflow check here b/c shares totalSupply will always be <= dai totalSupply
+// note: we don't need an overflow check here b/c shares totalSupply will always be <= dai totalSupply
         unchecked {
             balanceOf[receiver] = balanceOf[receiver] + shares;
             totalSupply = totalSupply + shares;
@@ -263,79 +243,7 @@ contract SavingsDai {
         emit Withdraw(msg.sender, receiver, owner, assets, shares);
     }
 
-    // --- ERC-4626 ---
-
-    function asset() external view returns (address) {
-        return address(dai);
-    }
-
-    function totalAssets() external view returns (uint256) {
-        return convertToAssets(totalSupply);
-    }
-
-    function convertToShares(uint256 assets) public view returns (uint256) {
-        uint256 rho = pot.rho();
-        uint256 chi = (block.timestamp > rho) ? _rpow(pot.dsr(), block.timestamp - rho) * pot.chi() / RAY : pot.chi();
-        return assets * RAY / chi;
-    }
-
-    function convertToAssets(uint256 shares) public view returns (uint256) {
-        uint256 rho = pot.rho();
-        uint256 chi = (block.timestamp > rho) ? _rpow(pot.dsr(), block.timestamp - rho) * pot.chi() / RAY : pot.chi();
-        return shares * chi / RAY;
-    }
-
-    function maxDeposit(address) external pure returns (uint256) {
-        return type(uint256).max;
-    }
-
-    function previewDeposit(uint256 assets) external view returns (uint256) {
-        return convertToShares(assets);
-    }
-
-    function deposit(uint256 assets, address receiver) public returns (uint256 shares) {
-        uint256 chi = (block.timestamp > pot.rho()) ? pot.drip() : pot.chi();
-        shares = assets * RAY / chi;
-        _mint(assets, shares, receiver);
-    }
-
-    function deposit(uint256 assets, address receiver, uint16 referral) external returns (uint256 shares) {
-        shares = deposit(assets, receiver);
-        emit Referral(referral, receiver, assets, shares);
-    }
-
-    function maxMint(address) external pure returns (uint256) {
-        return type(uint256).max;
-    }
-
-    function previewMint(uint256 shares) external view returns (uint256) {
-        uint256 rho = pot.rho();
-        uint256 chi = (block.timestamp > rho) ? _rpow(pot.dsr(), block.timestamp - rho) * pot.chi() / RAY : pot.chi();
-        return _divup(shares * chi, RAY);
-    }
-
-    function mint(uint256 shares, address receiver) public returns (uint256 assets) {
-        uint256 chi = (block.timestamp > pot.rho()) ? pot.drip() : pot.chi();
-        assets = _divup(shares * chi, RAY);
-        _mint(assets, shares, receiver);
-    }
-
-    function mint(uint256 shares, address receiver, uint16 referral) external returns (uint256 assets) {
-        assets = mint(shares, receiver);
-        emit Referral(referral, receiver, assets, shares);
-    }
-
-    function maxWithdraw(address owner) external view returns (uint256) {
-        return convertToAssets(balanceOf[owner]);
-    }
-
-    function previewWithdraw(uint256 assets) external view returns (uint256) {
-        uint256 rho = pot.rho();
-        uint256 chi = (block.timestamp > rho) ? _rpow(pot.dsr(), block.timestamp - rho) * pot.chi() / RAY : pot.chi();
-        return _divup(assets * RAY, chi);
-    }
-
-    function withdraw(uint256 assets, address receiver, address owner) external returns (uint256 shares) {
+function withdraw(uint256 assets, address receiver, address owner) external returns (uint256 shares) {
         uint256 chi = (block.timestamp > pot.rho()) ? pot.drip() : pot.chi();
         shares = _divup(assets * RAY, chi);
         _burn(assets, shares, receiver, owner);
@@ -430,3 +338,5 @@ contract SavingsDai {
     }
 
 }
+
+
