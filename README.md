@@ -17,6 +17,12 @@ BWise is in the same time, making sure that your money is not going out of range
 To reduce fragmentation of Liquidity we have chosen to use SPARK technology by choosing DAI as a bridge currency. Every trade in our Auto-Rebalancing mechanism will include DAI/ABC pair. 
 DAI is stable coin and participates naturally into reducing Impermanent loss.
 
+# Research on Impermanent Loss 
+
+"We have verified the formulas to calculate impermanent loss based on the latest ETH price history using the concentrated liquidity formula adopted in Uniswap v3".
+
+- You can find our work here : https://github.com/mrhouzlane/BWise/blob/main/impermanent_loss/BWise_Maths.ipynb
+
 
 # Tehcnical Architecture 
 
