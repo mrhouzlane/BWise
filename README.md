@@ -48,7 +48,8 @@ Example of verification :
 - TableLand
 
     - Our implementation include a TableLand server allowing creation/insert data into our database.
-  
+    - POC : [https://sepolia.etherscan.io/tx/0xf3ae75b0ada09e0212833cbaedb199d9676ba41669320e18338fd884130b870d](Insert)
+    - Database : ```{"name":"bwise_11155111_200","externalUrl":"https://testnets.tableland.network/api/v1/tables/11155111/200","animationUrl":"https://tables.testnets.tableland.xyz/11155111/200.html","image":"https://tables.testnets.tableland.xyz/11155111/200.svg","schema":{"columns":[{"name":"TokenA","type":"text"},{"name":"TokenB","type":"text"},{"name":"Platform","type":"text"},{"name":"Value","type":"integer"},{"name":"AutoRebalance","type":"integer"}]},"attributes":[{"displayType":"date","traitType":"created","value":1697641468}]}```
 
 We have deployed contracts on Scroll. 
 
