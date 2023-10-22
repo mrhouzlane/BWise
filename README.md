@@ -2,8 +2,6 @@
 
 ## Introduction
 
-## Introduction
-
 `Having non-correlated source of risk, so the movement at least do not correspond one-to-one, is better than having just one source of risk.`   -  ETHGlobalOnline 2023.
 
 `Why does banks exist ? It’s because they offer multiple financial services. They keep money for savers but also can be lenders. What is BWise providing is similar to banking.` 
@@ -18,7 +16,6 @@
 
 To reduce fragmentation of Liquidity we have chosen to use SPARK technology by choosing DAI as a bridge currency. Every trade in our Auto-Rebalancing mechanism will include DAI/ABC pair. 
 DAI is stable coin and participates naturally into reducing Impermanent loss.
-
 
 
 # Tehcnical Architecture 
