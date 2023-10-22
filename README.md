@@ -11,6 +11,9 @@
 `BWise is in the same time, making sure that your money is not going out of range of uniswap pools and thus, you are not been victim of impermanent loss but it is also using that extra amount of tokens that is recalibrated and not used anymore as a lending share, thus enabling you to earn yield thanks to SPARK technology with a stable coin.`
 
 
+![Solution](./docs/BWise.png)
+
+
 # Description 
 
 To reduce fragmentation of Liquidity we have chosen to use SPARK technology by choosing DAI as a bridge currency. Every trade in our Auto-Rebalancing mechanism will include DAI/ABC pair. 
@@ -19,6 +22,10 @@ DAI is stable coin and participates naturally into reducing Impermanent loss.
 
 
 # Tehcnical Architecture 
+
+![diagram](./docs/Logic.png)
+
+
 
 Contracts are deployed on Scroll using Foundry :
 
@@ -48,7 +55,6 @@ We have deployed contracts on Scroll.
     - we have modified savingsDai contract to have a getLiquidityPosition that allows us to monitor DAI position in the monitor contract. 
 
 
-# Demo 
 
 
 # Contact 
