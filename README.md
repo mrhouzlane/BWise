@@ -25,6 +25,7 @@ DAI is stable coin and participates naturally into reducing Impermanent loss.
 
 ![diagram](./docs/Logic.png)
 
+![rebalance](./docs/Rebalance.png)
 
 
 Contracts are deployed on Scroll using Foundry :
