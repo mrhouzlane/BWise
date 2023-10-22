@@ -1,39 +1,37 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setWallet } from "../../redux/wallet/slice";
-import { selectWallet } from "../../redux/wallet/selector";
-
+import { InjectedConnector } from '@wagmi/core';
 import style from './Wallet.module.scss';
+import { useAccount, useConnect } from 'wagmi';
 
 const Wallet = () => {
   const dispatch = useDispatch();
 
-  // get wallet from store
-  const wallet = useSelector(selectWallet);
+  const { address, isConnected } = useAccount();
+  
+  const { connect } = useConnect({
+    connector: new InjectedConnector(),
+  });
 
-  // connect metamask to user account
-  const connectMetaMask = async () => {
+  // connect to metamask wallet
+   const connectMetaMask = async () => {
     if (window.ethereum) {
       try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        dispatch(setWallet({ address: accounts[0] }));
-      } catch (error) {
-        console.error("User denied account access");
+        connect();
+      } catch (err) {
+        console.error("User access denied");
       }
-    } else {
-      alert("Please install MetaMask!");
     }
-  };
+   }
 
-  if (!wallet.connected) {
+  if (!isConnected) {
     return <button  className={style.connected} onClick={connectMetaMask}>Connect Wallet</button>;
   }
 
   return (
     <button className={style.wallet}>
-      {`${wallet.address.substring(0, 6)}...${wallet.address.substring(
-        wallet.address.length - 4
+      {`${address.substring(0, 6)}...${address.substring(
+        address.length - 4
       )}`}
     </button>
   );
