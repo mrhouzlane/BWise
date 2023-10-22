@@ -1,21 +1,22 @@
 import React from "react";
 import Web3 from "web3";
 
-import { useSelector } from "react-redux";
-import { selectWallet } from "../../redux/wallet/selector";
-
 import style from "./Dashboard.module.scss";
 
 import InfoContainer from "../../components/InfoContainer";
 
 import abi from "../../abi.json";
+import chAbi from "./chAbi.json";
+
+import { useAccount } from 'wagmi';
 
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
+const chContractAddress = process.env.REACT_APP_CH_CONTRACT_ADDRESS;
 
 const Dashboard = () => {
   const [tokens, setTokens] = React.useState([]);
-
-  const wallet = useSelector(selectWallet);
+  
+  const { address, isConnected } = useAccount();
 
   // add token to array
   const addToken = (newToken) => {
@@ -27,60 +28,81 @@ const Dashboard = () => {
   };
 
   React.useEffect(() => {
-    if (wallet.connected) {
+    if (isConnected) {
       loadWeb3Data();
     }
-  }, [wallet.connected]);
+  }, [isConnected]);
 
   const loadWeb3Data = async () => {
+   if (window.ethereum) {
+    window.web3 = new Web3(window.ethereum);
+
+     await window.ethereum.request({ method: "eth_requestAccounts" });
+
+     const web3 = window.web3;
+     //const accounts = await web3.eth.getAccounts();
+
+    const contract = createContract(web3, contractAddress);
+
+     const balance = await contract.methods.balanceOf(address).call();
+
+     //console.log(accounts[1]);
+
+     if (balance > 0) {
+       for (let i = 0; i < balance; i++) {
+         const tokenId = await contract.methods
+           .tokenOfOwnerByIndex(address, i)
+           .call();
+
+         const position = await contract.methods.positions(tokenId).call();
+         //
+         const token0Contract = createContract(web3, position.token0);
+         //
+         const token1Contract = createContract(web3, position.token1);
+         //
+         let token0Name = await token0Contract.methods.symbol().call();
+         //
+         let token1Name = await token1Contract.methods.symbol().call();
+
+         let fee = Number(position.fee) / (10 * 10 * 10 * 10);
+
+         const newToken = {
+           tokenId,
+           token0: token0Name,
+           token1: token1Name,
+           fee,
+         };
+         //
+         addToken(newToken);
+       }
+     }
+   } else {
+     alert("Install dApp");
+   }
+  };
+
+  const startPrice = async () => {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
+  
+       await window.ethereum.request({ method: "eth_requestAccounts" });
+  
+       const web3 = window.web3;
+       //const accounts = await web3.eth.getAccounts();
+  
+      const chContract = createContract(web3, chContractAddress);
 
-      await window.ethereum.request({ method: "eth_requestAccounts" });
+      console.log(chContractAddress);
 
-      const web3 = window.web3;
-      //const accounts = await web3.eth.getAccounts();
+       const stPrice = await chContract.methods.getETHPrice(10).call();
 
-      const contract = createContract(web3, contractAddress);
-
-      const balance = await contract.methods.balanceOf(wallet.address).call();
-
-      //console.log(accounts[1]);
-
-      if (balance > 0) {
-        for (let i = 0; i < balance; i++) {
-          const tokenId = await contract.methods
-            .tokenOfOwnerByIndex(wallet.address, i)
-            .call();
-
-          const position = await contract.methods.positions(tokenId).call();
-          //
-          const token0Contract = createContract(web3, position.token0);
-          //
-          const token1Contract = createContract(web3, position.token1);
-          //
-          let token0Name = await token0Contract.methods.symbol().call();
-          //
-          let token1Name = await token1Contract.methods.symbol().call();
-
-          let fee = Number(position.fee) / (10 * 10 * 10 * 10);
-
-          const newToken = {
-            tokenId,
-            token0: token0Name,
-            token1: token1Name,
-            fee,
-          };
-          //
-          addToken(newToken);
-        }
-      }
+       console.log(stPrice);
     } else {
       alert("Install dApp");
     }
-  };
+  }
 
-  if (!wallet.connected) {
+  if (!isConnected) {
     return <InfoContainer />;
   }
 
@@ -118,7 +140,7 @@ const Dashboard = () => {
                     />
                     <span>UniswapV3</span>
                   </td>
-                  <td>{token.fee}</td>
+                  <td>{token.fee}%</td>
                   <td>$1.240</td>
                   <td>
                     <form>
@@ -129,13 +151,8 @@ const Dashboard = () => {
               ))}
             </tbody>
           </table>
-          <button className={style.button}>Rebalance</button>
+          <button onClick={startPrice} className={style.button}>Rebalance</button>
         </div>
-        {/* <span className={style.tokenItem}>{tokens.token0}-{tokens.token1}</span>
-        <span className={style.tokenItem}>
-          
-          Uniswap v3
-        </span> */}
       </div>
     </div>
   );
