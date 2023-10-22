@@ -45,6 +45,11 @@ Example of verification :
 
 # Technology used 
 
+- TableLand
+
+    - Our implementation include a TableLand server allowing creation/insert data into our database.
+  
+
 We have deployed contracts on Scroll. 
 
 - Chainlink
