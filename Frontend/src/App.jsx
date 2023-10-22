@@ -3,10 +3,11 @@ import MainLayout from "./layout/MainLayout";
 import ComingSoon from "./pages/ComingSoon";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
+import History from "./pages/History";
 
 export const menus = [
     { name: "Dashboard", path: "/", element: <Dashboard />, image: "dashboard.svg" },
-    { name: "History", path: "/history", element: <ComingSoon />, image: "history.svg" },
+    { name: "History", path: "/history", element: <History />, image: "history.svg" },
     { name: "Settings", path: "/settings", element: <ComingSoon />, image: "settings.svg" },
     { name: "About", path: "/about", element: <About />, image: "about.svg" }
 ];
