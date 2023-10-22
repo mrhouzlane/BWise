@@ -29,7 +29,8 @@ Contracts are deployed on Scroll using Foundry :
 
 Example of verification : 
 
-``` // Verify SavingsDai forge verify-contract
+// Verify SavingsDai forge verify-contract
+```
   --num-of-optimizations 10 /
   --watch /
   --constructor-args $(cast abi-encode "constructor(address, address)" 0x9BfCdf238d9Ad87e526d166020990F1a22c9708F 0x3F9696ADb8cB545a8D58015550E9E4190b4665F6) /
@@ -49,7 +50,9 @@ Example of verification :
 
     - Our implementation include a TableLand server allowing creation/insert data into our database.
     - POC : [https://sepolia.etherscan.io/tx/0xf3ae75b0ada09e0212833cbaedb199d9676ba41669320e18338fd884130b870d](Insert)
-    - Database : ```{"name":"bwise_11155111_200","externalUrl":"https://testnets.tableland.network/api/v1/tables/11155111/200","animationUrl":"https://tables.testnets.tableland.xyz/11155111/200.html","image":"https://tables.testnets.tableland.xyz/11155111/200.svg","schema":{"columns":[{"name":"TokenA","type":"text"},{"name":"TokenB","type":"text"},{"name":"Platform","type":"text"},{"name":"Value","type":"integer"},{"name":"AutoRebalance","type":"integer"}]},"attributes":[{"displayType":"date","traitType":"created","value":1697641468}]}```
+    - Database : 
+```    {"name":"bwise_11155111_200","externalUrl":"https://testnets.tableland.network/api/v1/tables/11155111/200","animationUrl":"https://tables.testnets.tableland.xyz/11155111/200.html","image":"https://tables.testnets.tableland.xyz/11155111/200.svg","schema":{"columns":[{"name":"TokenA","type":"text"},{"name":"TokenB","type":"text"},{"name":"Platform","type":"text"},{"name":"Value","type":"integer"},{"name":"AutoRebalance","type":"integer"}]},"attributes":[{"displayType":"date","traitType":"created","value":1697641468}]}
+```
 
 #### Scroll :
 
