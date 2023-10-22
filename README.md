@@ -35,6 +35,7 @@ Contracts are deployed on Scroll using Foundry :
 
 Example of verification : 
 
+```
 // Verify SavingsDai forge verify-contract
 
   --num-of-optimizations 10 /
@@ -46,7 +47,7 @@ Example of verification :
   --compiler-version v0.8.20 / 
   0xD46073c9118890eeaAF804Ff0EA9615fe4701b7d / 
   SavingsDai /
-
+``` 
 
 
 
